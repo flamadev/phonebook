@@ -3,6 +3,6 @@ const server = jsonServer.create();
 const router = jsonServer.router('./api/db.json');
 const middlewares = jsonServer.defaults();
 server.use(middlewares);
-server.use(router);
+server.use('/api', router);
 
-module.exports(server);
+module.exports = server;
